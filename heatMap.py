@@ -17,7 +17,7 @@ def get_world_data_frame():
 if __name__ == "__main__":
 	#xls = pd.ExcelFile('Global Findex Database.xlsx')
 	#df = pd.read_excel(xls, 'Data')
-	df = pd.read_excel('Global Findex Database.xlsx',sheet_name = 'Data', usecols = "A:F")
+	df = pd.read_excel('data/Global Findex Database.xlsx',sheet_name = 'Data', usecols = "A:F")
 	df = df.loc[df['Year'] == 2017]
 	print(df.columns.values[-1],"column_names")
 	df = df.rename(columns={df.columns.values[-1]: "Unbanked"})
